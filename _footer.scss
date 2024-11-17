@@ -1,0 +1,234 @@
+/* --- M O B I L E   F I R S T --- */
+
+.footer{
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 20px;
+    .footer-content{
+      border-top: 2px solid #E4E4E4;
+      text-align: center;
+      .text-footer{
+        margin-bottom: 30px;
+        .logo-footer{
+          display: flex;
+          justify-self: center;
+          align-items: center;
+          margin-bottom: 30px;
+          padding-top: 50px;
+          span{
+            @include footer-logo-mobile;
+          }
+
+          .logo-p{
+            @include footer-logo-mobile;
+            color: $text-color;
+            font-weight: 500;
+          }
+
+          p{
+            @include footer-p-mobile;
+          }
+        }
+      }
+        .what-we-do{
+          display: none;
+        }
+        
+        .company{
+          display: none;
+        }
+
+        .support{
+          display: none;
+        }
+
+        .contact{
+          display: none;
+        }
+
+    }
+    .social-media{
+      margin-bottom: 30px;
+
+      .twitter{
+        margin: 0 10px;
+      }
+    }
+    .copyright{
+      padding: 20px 0;
+      width: 100%;
+      border-top: 1px solid #F1F1F1;
+      p{
+        @include footer-p-mobile;
+        text-align: center;
+        color: #A4A4A4;
+      }
+    }
+  }
+}
+
+
+/* --- T A B L E T --- */
+
+@media (min-width: 768px) {
+  .footer{
+
+    .container{
+      .footer-content{
+        width:84.02vw;
+        max-width: 1209.94px;
+        .text-footer{
+          .logo-footer{
+            span{
+              @include footer-logo-tablet;
+            }
+  
+            .logo-p{
+              @include footer-logo-tablet;
+            }
+  
+            p{
+              @include footer-p-tablet;
+            }
+          }
+        }
+        .copyright{
+          p{
+            @include footer-p-tablet;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --- D E S K  L I T T L E --- */
+
+@media (min-width: 1024px) {
+  .footer{
+
+    .container{
+      padding:0 clamp(6.6vw, 0px, 90px);
+      .footer-content{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1209.94px;
+        .text-footer{
+          .logo-footer{
+            justify-self: flex-start;
+            span{
+              @include footer-logo-desk;
+              text-align: left;
+            }
+  
+            .logo-p{
+              @include footer-logo-desk;
+              font-weight: 500;
+              text-align: left;
+            }
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            &:hover{
+              transform: scale(1.05);
+            }
+  
+          }
+            p{
+              @include footer-p-desk;
+              text-align: left;
+              max-width: 270px;
+            }
+        }
+
+          .col-footer{
+            text-align: left;
+            max-width: 150px;
+            h3{
+              @include h3-desk;
+              font-weight: 800;
+              margin-bottom: 30px;
+              padding-top: 50px;
+              cursor: pointer;
+              transition: all .3s ease-in-out;
+              &:hover{
+                transform: scale(1.05);
+            }
+            }
+
+            ul{
+              @include footer-p-desk;
+              display: flex;
+              flex-direction: column;
+
+              li{
+                display: inline;
+                list-style-type: none;
+                border-bottom: 2px solid transparent;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+                text-decoration: underline;
+                text-decoration-thickness: 2px;
+                text-underline-offset: 5px;
+                text-decoration-color: transparent;
+                &:hover{
+                  text-decoration: underline;
+                  text-decoration-thickness: 2px;
+                  text-underline-offset: 5px;
+                  text-decoration-color: $main-color;
+            }
+              }
+            }
+          }
+          .what-we-do{
+            display: inline-block;
+          }
+          
+          .company{
+            display: inline-block;
+          }
+  
+          .support{
+            display: inline-block;
+          }
+  
+          .contact{
+            display: inline-block;
+          }
+  
+      }
+      .social-media{
+        align-self: flex-start;
+        img{
+          border-radius: 50%;
+          cursor: pointer;
+          transition: all .3s ease-in-out;
+          &:hover{
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba($color: black, $alpha: 0.2)
+          }
+        }
+      }
+      .copyright{
+        p{
+          @include p-desk;
+        }
+      }
+    }
+  }
+}
+
+/* --- D E S K  M A X --- */
+
+@media (min-width: 1440px) {
+  .footer .container {
+    padding: 0 102.816px;
+    .footer-content{
+      width: 1209.94px;
+    }
+  }
+}

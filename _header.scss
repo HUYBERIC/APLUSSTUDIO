@@ -1,0 +1,220 @@
+/* --- M O B I L E   F I R S T --- */
+
+header {
+  z-index: 1000;
+  .container {
+    display: flex;
+    justify-self: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    .logo {
+      @include logo-mobile;
+      span {
+        font-weight: 900;
+      }
+      p {
+        font-family: $font-secondary;
+      }
+    }
+    .navbar {
+      display: flex;
+      position: relative;
+      z-index: 1;
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease-in-out;
+        span {
+          width: 25px;
+          height: 3px;
+          margin: 0px;
+          background-color: black;
+          opacity: 80%;
+          border-radius: 60px;
+          transform: rotate(0deg);
+          transition: 0.25s ease-in-out;
+          position: relative;
+          &:nth-child(1) {
+            top: 0px;
+            transform-origin: left center;
+          }
+          &:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+            transform-origin: left center;
+          }
+          &:nth-child(3) {
+            top: 100%;
+            transform-origin: left center;
+            transform: translateY(-100%);
+          }
+        }
+        &.active {
+          transition: all 0.3s ease-in-out;
+          span:nth-child(1) {
+            transform: rotate(45deg);
+            top: -5px;
+          }
+          span:nth-child(2) {
+            width: 0%;
+            opacity: 0;
+          }
+          span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 6px;
+            left: 0px;
+          }
+        }
+      }
+      .overlay {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0);
+        opacity: 1;
+        transition: opacity 0.5s ease;
+        transition: all 2s ease;
+        backdrop-filter: blur(0);
+        transition: opacity 0.5s ease, backdrop-filter 0.5s ease;
+        will-change: opacity, backdrop-filter;
+        z-index: 1000;
+        &.hide {
+          display: none;
+        }
+        &.show {
+          z-index: 1000;
+          opacity: 1;
+          backdrop-filter: blur(5px);
+        }
+      }
+      .nav-links {
+        @include nav-mobile;
+        width: 0vw;
+        position: fixed;
+        list-style: none;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.6);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 8px;
+        right: 0;
+        top: 15vw;
+        transition: all 0.6s ease;
+        opacity: 0;
+        z-index: 1001;
+        li {
+          margin: 15px 0;
+          text-wrap: nowrap;
+          opacity: 0;
+        }
+      }
+      .nav-links.active {
+        display: block;
+        width: 40vw;
+        opacity: 1;
+        li {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+/* --- T A B L E T --- */
+
+@media (min-width: 768px) {
+  header {
+    .container {
+      .logo {
+        @include logo-tablet;
+      }
+      .navbar {
+        .nav-links {
+          @include nav-desk;
+          top: 50px;
+        }
+        .nav-links.active {
+          width: 30vw;
+        }
+      }
+    }
+  }
+}
+
+/* --- D E S K  L I T T L E --- */
+
+@media (min-width: 1024px) {
+  header {
+    margin-top: 30px;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 30px;
+    .container {
+      padding: 0 7.14vw;
+      justify-content: space-between;
+      .logo {
+        @include logo-desk;
+        text-wrap: nowrap;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.05);
+        }
+      }
+      .navbar {
+        display: grid;
+        grid-template-columns: 0px 50vw;
+        .hamburger {
+          grid-column: 1/2;
+          display: none;
+          width: 0;
+        }
+        .nav-links {
+          grid-column: 2/3;
+          @include nav-desk;
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          background-color: transparent;
+          width: auto;
+          box-shadow: none;
+          padding: 0;
+          border-radius: 0;
+          transform: none;
+          opacity: 1;
+          top: 0;
+          li {
+            transition: all 0.3s ease;
+            padding: 5px;
+            border-radius: 10px;
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              cursor: pointer;
+              transform: scale(1.1);
+              background-color: $main-color;
+              color: white;
+              box-shadow: 0 4px 15px rgba(0, 0, 255, 0.3);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --- D E S K  M A X --- */
+
+@media (min-width: 1440px) {
+  header {
+    .container {
+      padding: 0 102.8px;
+      .navbar {
+        display: grid;
+        grid-template-columns: 0px 700px;
+      }
+    }
+  }
+}

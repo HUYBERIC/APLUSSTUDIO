@@ -1,0 +1,173 @@
+// I M P O R T
+
+@font-face {
+    font-family: 'Averta';
+    src: url(font/FontsFree-Net-AvertaDemoPECuttedDemo-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Proxima';
+    src: url(font/Proxima\ Nova\ Font.otf);
+}
+
+// R O O T
+
+$font: 'Averta';
+$font-secondary: 'Proxima';
+$bg-color: #F4F9FF;
+$second-bg-color: #FFF5DB;
+$text-color: black;
+$main-color: #2639ED;
+
+// M I X I N _ D E S K T O P
+
+@mixin logo-desk{
+    font-size: 27.15px;
+    font-weight: 700;
+    line-height: 33.07px;
+}
+
+@mixin nav-desk {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.78px;
+    letter-spacing: 1%;
+}
+
+@mixin h1-desk {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 49.44px;
+}
+
+@mixin h2-desk {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.8px;
+}
+
+@mixin h3-desk {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.72px;
+}
+
+@mixin p-desk {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+}
+
+@mixin footer-logo-desk{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.23px;
+}
+
+@mixin footer-p-desk{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+// M I X I N _ T A B L E T
+
+@mixin logo-tablet {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+@mixin nav-tablet {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.5%;
+}
+
+@mixin h1-tablet {
+    font-size: 25px; 
+    font-weight: 900;
+    line-height: 45px;
+}
+
+@mixin h2-tablet {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+@mixin h3-tablet {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+@mixin p-tablet {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+@mixin footer-logo-tablet {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+}
+
+@mixin footer-p-tablet {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+// M I X I N _ M O B I L E
+
+@mixin logo-mobile {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+@mixin nav-mobile {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.5%;
+}
+
+@mixin h1-mobile {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 36px;
+}
+
+@mixin h2-mobile {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+@mixin h3-mobile {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+@mixin p-mobile {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+@mixin footer-logo-mobile {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+@mixin footer-p-mobile {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+}

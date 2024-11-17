@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Averta", sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+ul, li, a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    color: $text-color;
+    height: 200vh;
+    align-items: center;
+}
+
+.container{
+    width: 100vw;
+    max-width: 1400px;
+    height: auto;
+}
+
+span{
+    font-weight: 900;
+}
+
+.hide{
+    display:none;
+    opacity: 0;
+}
+
+p{
+    color: #565656;
+}
